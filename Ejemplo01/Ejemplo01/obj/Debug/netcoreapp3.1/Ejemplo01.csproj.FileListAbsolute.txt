@@ -1,0 +1,14 @@
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.exe
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.deps.json
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.runtimeconfig.json
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.runtimeconfig.dev.json
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.dll
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\bin\Debug\netcoreapp3.1\Ejemplo01.pdb
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.csproj.AssemblyReference.cache
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.AssemblyInfoInputs.cache
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.AssemblyInfo.cs
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.dll
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.pdb
+C:\Users\santiago\Desktop\adsi-2338200\Ejemplo01\Ejemplo01\obj\Debug\netcoreapp3.1\Ejemplo01.genruntimeconfig.cache
