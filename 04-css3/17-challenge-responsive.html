@@ -1,116 +1,199 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>challenge-responsive</title>
-    <link rel="stylesheet" href="css/master.css">
+    <title>Challenge Responsive </title>
+    	<style>
+		* {
+			transition: all 0.5s;
+		}
+        
+		body {
+            background-color:rgb(19, 0, 0);
+            color: aliceblue;
+			font: 16px AgencyFB;
+		}
+		main {
+			margin: 0px auto;
+			width: 1280px;
+		}
+		header div.logo {
+			background: url(img/opm-logo.png) no-repeat center;
+			background-size: cover;
+			height: 270px;
+		}
+		section.Menu {
+			margin-top: 40px;
+		}
+		section.Menu div {
+			display: inline-block;
+			height: 280px;
+			margin-right: 28px;
+			position: relative;
+			width: 280px;
+		}
+		section.Menu div:first-child {
+			margin-left: 28px;
+		}
+		section.Menu div:last-child {
+			margin-right: 0px;
+		}
+		section.Menu div.I1 {
+			background: url(img/opm1.jpg) no-repeat center;
+			background-size: cover;
+		}
+		section.Menu div.I2 {
+			background: url(img/opm2.jpg) no-repeat center;
+			background-size: cover;
+		}
+		section.Menu div p {
+			background-color: rgba(14, 5, 146, 0.308);
+			color: rgba(255, 255, 255, 0.8);
+			bottom: 0px;
+			font-size: 1.4em;
+			height: 20px;
+			margin: 0px;
+			padding: 20px;
+			position: absolute;
+			text-align: center;
+			width: 240px;
+			transition: all 0.4s ease-in;
+		}
+        /* A N I M A C I O N */
+		section.Menu div:hover {
+			cursor: pointer;
+            border: 0.5px solid rgb(0, 60, 255);
+		}
+		section.Menu div:hover p {
+			height: 60px;
+            background-color: rgba(36, 5, 146, 0.767);
+		}
+		section {
+			margin-top: 40px;
+		}
+		section article {
+			border: 1px dotted rgb(17, 0, 255);
+			height: 280px;
+			position: relative;
+			margin: 50px 28px;
+		}
+		section article figure {
+			background: url(img/opm3.jpg) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px auto;
+			width: 280px;
+		}
+		section article.art1 figure {
+			background-position: right center;
+		}
+		section article figure,
+		section article div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		section article div {
+			margin-left: 25px;
+			width: 600px;
+		}
+		section article div h2 {
+			color: aliceblue;
+			font-size: 2em;
+			margin: 20px 0px;
+		}
+		section article div p {
+			color: aliceblue;
+			line-height: 1.4em;
+		}
+        /* R E S P O N S I V E */
+		@media (max-width: 1290px) {
+			main {
+				width: 680px;
+			}
+			header div.logo {
+				background-size: 120%;
+			}
+			section.Menu div {
+				margin: 28px;
+			}
+			section article div {
+				width: 280px;
+			}
+			section article div h2 {
+				font-size: 1.4em;
+			}
+			section article div p {
+				overflow: scroll;
+				height: 180px;
+			}
+		}
+		@media (max-width: 690px) {
+			main {
+				width: 480px;
+			}
+			section.Menu div {
+				display: block;
+				margin: 28px auto !important;
+			}
+			section article {
+				height: 560px;
+				margin: 40px auto;
+				width: 280px;
+			}
+			section article figure,
+			section article div {
+				display: block;
+			}
+			section article div {
+				margin-left: 0px;
+				width: 280px;
+			}
+		}
+		/*Final Stilo*/
+	</style>
 </head>
-<style>
-    main header div.logo {
-        background: url(img/opm-logo.png) no-repeat center;
-        height: 450px;
-        margin: 0 auto;
-        width: 1600px;
-
-    }
-    main section.gallery div{
-        background-color: black;
-        margin: 0px auto;
-        width: 280px;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-    }
-    div.gallery01 {
-        background: url(img/opm1.jpg) no-repeat center;
-        background-size: cover;
-        height: 200px;
-        width: 280px;
-        text-align: center;
-        border: 2px solid #fff;
-        margin: 10px;
-        box-sizing: border-box;
-        display: inline-block;
-        margin-left: 400px;
-        
-}
-
-    div.gallery02 {
-        background: url(img/opm2.jpg) no-repeat center;
-        background-size: cover;
-        height: 200px;
-        width: 280px;
-        text-align: center;
-        border: 2px solid #fff;
-        margin: 10px;
-        box-sizing: border-box;
-        display: inline-block;
-        
-
-}
-
-div.gallery03 {
-        background: url(img/opm2.jpg) no-repeat center;
-        background-size: cover;
-        height: 200px;
-        width: 280px;
-        text-align: center;
-        border: 2px solid #fff;
-        margin: 10px;
-        box-sizing: border-box;
-        display: inline-block;
-        
-
-}
-div.gallery04 {
-        background: url(img/opm1.jpg) no-repeat center;
-        background-size: cover;
-        height: 200px;
-        width: 280px;
-        text-align: center;
-        border: 2px solid #fff;
-        margin: 10px;
-        box-sizing: border-box;
-        display: inline-block;
-        
-    }
-    main section gallery div:hover h3 {
-        background-color:  #00000066;
-        bottom: 141px;
-
-    }
-        
-        
-        
-   
-            
-            
-       
-    
-</style>
-
 <body>
-    <main>
-        <header>
-            <h1><a href="index.html">⬅</a> challenge-responsive</h1>
-            <div class="logo"></div>
-        </header>
-        <section class="gallery">
-            <div class="gallery01">
-                <h3>opm(season1)</h3>
-            </div>
-            <div class="gallery02">
-                <h3>opm/(season2)</h3>
-            </div>
-            <div class="gallery03">
-                <h3>opm(season3)</h3>
-            </div>
-            <div class="gallery04">
-                <h3>opm(season4)</h3>
-            </div>
-        </section>
-    </main>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="Menu">
+			<div class="Temp I1">
+				<p>OPM (season 1)</p>
+			</div>
+			<div class="Temp I2">
+				<p>OPM (season 2)</p>
+			</div>
+			<div class="Temp I1">
+				<p>OPM (season 3)</p>
+			</div>
+			<div class="Temp I2">
+				<p>OPM (season 4)</p>
+			</div>
+		</section>
+		<section>
+			<article class="art1">
+				<figure></figure>
+				<div class="content">
+					<h3> SAITAMA SENSEI </h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quam reprehenderit beatae explicabo porro excepturi sunt, totam obcaecati culpa nisi quasi qui earum sint nam. Incidunt repellat sequi recusandae non dolorem, dolor ex minus eius ad veritatis earum, dicta vitae odit laudantium saepe hic et quam nobis maxime quod maiores fugit laboriosam magni amet. Labore laudantium dignissimos, laboriosam quisquam sequi beatae itaque officia quos praesentium distinctio doloremque, aut quae ex, veniam sit eaque accusamus. Sapiente quas quae amet quidem iusto nam ipsum nihil.
+					</p>
+				</div>
+			</article>
+			<article class="art2">
+				<figure></figure>
+				<div class="content">
+					<h3> GENOS </h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quam reprehenderit beatae explicabo porro excepturi sunt, totam obcaecati culpa nisi quasi qui earum sint nam. Incidunt repellat sequi recusandae non dolorem, dolor ex minus eius ad veritatis earum, dicta vitae odit laudantium saepe hic et quam nobis maxime quod maiores fugit laboriosam magni amet. Labore laudantium dignissimos, laboriosam quisquam sequi beatae itaque officia quos praesentium distinctio doloremque, aut quae ex, veniam sit eaque accusamus. Sapiente quas quae amet quidem iusto nam ipsum nihil.
+					</p>
+				</div>
+				
+			</article>
+		</section>
+	</main>
 </body>
 </html>
