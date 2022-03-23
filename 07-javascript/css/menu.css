@@ -23,7 +23,6 @@ header h1{
 nav{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     overflow-y: auto;
     height: 560px;
     gap: 1rem;
