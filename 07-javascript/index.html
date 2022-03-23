@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main menu JS</title>
+   <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>main menu </h1>
+        </header>
+        <nav id="menu">
+        </nav>
+</main>
+<script>
+    const menu = document.getElementById('menu')
+    const links = [
+        {
+            url: '01-write.html', 
+        text: 'write'
+    },
+        
+        {
+            url: '02-comments.html', 
+        text: 'comments'
+    },
+        
+        {
+            url: '03-get-elements.html', 
+        text: 'get-elements'
+    },
+        
+        {
+            url: '04-variables.html', 
+        text: 'variables'
+    },
+        
+        {
+            url: '05-method-object.html', 
+        text: 'method-object'
+    },
+        
+        {
+            url: '06-types-objects.html', 
+        text: 'types-objects'
+    },
+        
+        {
+            url: '07-vehicle-object.html', 
+        text: 'vehicle-object'
+    },
+        
+        {
+            url: '08-functions.html', 
+        text: 'functions'
+    },
+        
+        {
+            url: '09-challenge-calculator.html', 
+        text: 'challenge-calculator'
+    },
+        
+        {
+            url: '10-operators-assigment.html', 
+        text: 'operators-assigment'
+    }
+
+    ]
+    links.forEach(item => renderLink(item.url, item.text))
+
+    function renderLink(url, text) {
+        menu.innerHTML += "<li><a href='+url+'><i>1</i> "+text+" </a></li>"
+    }
+</script>
+    
+</body>
+</html>
+
+
