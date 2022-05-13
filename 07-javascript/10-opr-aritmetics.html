@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithmetics</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        table.Operators {
+            font-size: 0.9rem;
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 400px;
+        }
+        table thead th {
+            background-color: rgba(255, 255, 0, 0.569);
+            color:black;
+        }
+        table th,
+        table td {
+            background-color: aliceblue;
+            padding: 6px;
+            color: black;
+            border: 1px solid black;
+        }
+        table thead input {
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            font-family: Poppins;
+            padding: 4px;
+            width: 120px;
+        }
+        table tbody td:first-child {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        table tbody tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.692);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                  </svg>
+            </a>
+            <h1>opr arithmetics</h1>
+        </header>
+        <section>
+            <table class="Operators">
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <input type="number" placeholder="Y value">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>operator</th>
+                        <th>Descripcion</th>
+                        <th>Example</th>
+                        <th>Result Y</th>
+                        <th>Result X</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>addition</td>
+                        <td>x=y+2</td>
+                        <td class="rx1"></td>
+                        <td class="ry1"></td>      
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>subtraction</td>
+                        <td>x=y-2</td>
+                        <td class="rx2"></td>
+                        <td class="ry2"></td>   
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Product</td>
+                        <td>x=y*2</td>
+                        <td class="rx3"></td>
+                        <td class="ry3"></td>   
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Divition</td>
+                        <td>x=y/2</td>
+                        <td class="rx4"></td>
+                        <td class="ry4"></td>   
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus</td>
+                        <td>x=y%2</td>
+                        <td class="rx5"></td>
+                        <td class="ry5"></td>   
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>increment(pre)</td>
+                        <td>x=++y</td>
+                        <td class="rx6"></td>
+                        <td class="ry6"></td>   
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>increment(pos)</td>
+                        <td>x=y++</td>
+                        <td class="rx7"></td>
+                        <td class="ry7"></td>   
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>decrement(pre)</td>
+                        <td>x=--y</td>
+                        <td class="rx8"></td>
+                        <td class="ry8"></td>   
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>decrement(pos)</td>
+                        <td>x=y--</td>
+                        <td class="rx9"></td>
+                        <td class="ry9"></td>   
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </nav>
+    </main>
+</body>
+</html>
