@@ -72,69 +72,104 @@
                         <td>+</td>
                         <td>addition</td>
                         <td>x=y+2</td>
-                        <td class="rx1"></td>
-                        <td class="ry1"></td>      
+                        <td class="rx"></td>
+                        <td class="ry"></td>      
                     </tr>
                     <tr>
                         <td>-</td>
                         <td>subtraction</td>
                         <td>x=y-2</td>
-                        <td class="rx2"></td>
-                        <td class="ry2"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>*</td>
                         <td>Product</td>
                         <td>x=y*2</td>
-                        <td class="rx3"></td>
-                        <td class="ry3"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>/</td>
                         <td>Divition</td>
                         <td>x=y/2</td>
-                        <td class="rx4"></td>
-                        <td class="ry4"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>%</td>
                         <td>Modulus</td>
                         <td>x=y%2</td>
-                        <td class="rx5"></td>
-                        <td class="ry5"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>++</td>
                         <td>increment(pre)</td>
                         <td>x=++y</td>
-                        <td class="rx6"></td>
-                        <td class="ry6"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>++</td>
                         <td>increment(pos)</td>
                         <td>x=y++</td>
-                        <td class="rx7"></td>
-                        <td class="ry7"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>--</td>
                         <td>decrement(pre)</td>
                         <td>x=--y</td>
-                        <td class="rx8"></td>
-                        <td class="ry8"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                     <tr>
                         <td>--</td>
                         <td>decrement(pos)</td>
                         <td>x=y--</td>
-                        <td class="rx9"></td>
-                        <td class="ry9"></td>   
+                        <td class="rx"></td>
+                        <td class="ry"></td>   
                     </tr>
                 </tbody>
             </table>
         </section>
         </nav>
     </main>
+    <script>
+        //var-const
+        const resultX=document.querySelectorAll('td.rx')
+        const resultY=document.querySelectorAll('td.ry')
+        
+        const input=document.querySelector('input')
+        //event
+        input.oninput=()=> {
+            if (input.value != ''){
+            //addition +
+            resultX[0].innerText=parseInt(input.value)
+            resultY[0].innerText=parseInt(input.value)+2
+            //substraction
+            resultX[1].innerText=parseInt(input.value)
+            resultY[1].innerText=parseInt(input.value)-2
+            //product
+            resultX[2].innerText=parseInt(input.value)
+            resultY[2].innerText=parseInt(input.value)*2
+            //division
+            resultX[3].innerText=parseInt(input.value)
+            resultY[3].innerText=parseInt(input.value)/2
+            //mod
+            resultX[4].innerText=parseInt(input.value)
+            resultY[4].innerText=parseInt(input.value)%2
+            
+            }
+            else {
+                for (let i = 0; i < resultX; i++) {
+                    resultX[i]='';
+                    resultY[i]='';
+                    
+                }
+            }
+        }
+    </script>
 </body>
 </html>
