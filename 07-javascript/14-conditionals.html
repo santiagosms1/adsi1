@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min menu JS</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        input, button {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        button {
+            background-color: #aa0;
+            font-family: poppins;
+            font-size: 0.8rem;
+            color: #ffd;
+            width: 220px;
+           
+        }
+        hr {
+            margin-top: 20px;
+            border: 1px solid #a00
+        }
+        h3.alert {
+            background-color: #aa0;
+            border: 1px dotted #fff;
+            padding: 10px;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+           
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+            </a>
+            <h1>example</h1>
+        </header>
+       <section>
+           <h4>how much is: 4*5/2?</h4>
+           <input type="number" class="answer">
+           <button>validate</button>
+           <hr>
+           <h3 class="alert">
+
+           </h3>
+           
+       </section>
+            
+    </main>
+    <script>
+        const answer = document.querySelector("input")
+        const button = document.querySelector("button")
+        const msj = document.querySelector("h3.alert")
+
+        button.onclick = () => {
+            let val = answer.value;
+            
+            if (val != ""){
+                if (parseInt(val) === 10 ) {
+                    alert("congratulation")
+
+                }else {
+                    alert("sorry")
+                }
+            }else {
+                alert("please, enter answer! ")
+            }
+        }
+        var today = new Date
+        switch (today.getDay()) {
+            case 1:
+                msj.innerText = "today is: monday😅"
+                break;
+                case 2:
+                msj.innerText = "today is: tuesday😋"
+                break;
+                case 3:
+                msj.innerText = "today is:  wendesday🛁"
+                break;
+                case 4:
+                msj.innerText = "today is: thursday🤗"
+                break;
+                case 5:
+                msj.innerText = "today is: friday🙄"
+                break;
+                case 6:
+                msj.innerText = "today is: saturday😏"
+                break;
+        default:
+        msj.innerText = "today is: weekend 🍻"
+             break;
+        }
+        
+    </script>
+</body>
+</html>
