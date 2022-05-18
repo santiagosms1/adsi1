@@ -19,22 +19,12 @@
             padding: 1px;
             
         }
-      
-        
-    
-        input.name{
-            border-radius: 20px;
-            position: absolute;
-            width: 309px;
-            height: 30px;
-            background-color: #ECECEC;
-            top: 310px;
-            left: 60px;
-            border: 1px solid #000000;
-            outline: none;
-            text-indent: 10px;
-        }
-        
+      /*INSERATR NOMBRE */
+    div.fullname h1{
+        background: url(images/CHALLENGE/nombre.png) no-repeat center;
+        width: 205.09px;
+        height: 24px;
+    }
         input#fechaNacimiento{
             border-radius: 20px;
             position: absolute;
@@ -49,6 +39,21 @@
             text-align: center;
             padding: 2px;
         }
+    
+        input.name{
+            border-radius: 20px;
+            position: absolute;
+            width: 309px;
+            height: 30px;
+            background-color: #ECECEC;
+            top: 310px;
+            left: 60px;
+            border: 1px solid #000000;
+            outline: none;
+            text-indent: 10px;
+        }
+        
+        
         .men{
             background: url(images/CHALLENGE/icono\ hombre.png) no-repeat;
             width: 195px;
@@ -101,9 +106,37 @@
         button.validate:hover{
             transform: scale(1.1);
         }
+    
+        .checkHB{
+            background: url(images/CHALLENGE/validateB.svg) no-repeat;
+            width: 20px;
+            height: 20px;
+            margin-left: 60px;
+            
+        }
+        .checkHG{
+            background: url(images/CHALLENGE/validateG.svg) no-repeat;
+            width: 20px;
+            height: 20px;
+            margin-left: 60px;
+        
+        }
+        .checkMG{
+            background: url(images/CHALLENGE/validateG.svg) no-repeat;
+            width: 120px;
+            height: 120px;
+            margin-left: 90px;
+            margin-top: 180px;
+        }
+        .checkMB{
+            background: url(images/CHALLENGE/validateB.svg) no-repeat;
+            width: 1px;
+            height: 0px;
+            margin-left: 90px;
+        }
         
         main.menGo article{
-            background: url(images/CHALLENGE/menwar.svg) no-repeat center;
+            background: url(images/CHALLENGE/hombre\ no\ va.png) no-repeat center;
             width: 425px;
             height: 600px;
             position: relative;
@@ -130,7 +163,7 @@
         }
         
         main.menNo article{
-            background: url(images/CHALLENGE/menwar.svg);
+            background: url(images/CHALLENGE/hombre\ no\ va.png);
             width: 425px;
             height: 600px;
             position: relative;
@@ -155,7 +188,7 @@
 
         }
         main.womanNo article{
-            background: url(images/CHALLENGE/moificada\ mujer.svg);
+            background: url(images/CHALLENGE/chica\ no\ va.png);
             width: 425px;
             height: 600px;
             position: relative;
@@ -178,6 +211,8 @@
             cursor: pointer;
 
         }
+        /*** ESTILOS BOTÓN SLIDE TOP ***/
+
         /* main.menNo,main.womanNo{
             display: none;
         } */
@@ -260,11 +295,11 @@
         </header>
         <article>
             <section>
-                <h1 id="edadwomanNo">Tu</h1>
+                <h1 id="edadwomanNo"></h1>
             </section>
             
             <footer>
-                <button class="three">Back</button>
+                <button class="three">back</button>
             </footer>
             
             
@@ -280,6 +315,7 @@
             </a>
             <h1>Challengue</h1>
         </header>
+        
         <article class="fondo">
             <header class="gender">
                 <button class="men">
@@ -292,9 +328,8 @@
                 </button>
             </header>
             <form class="information">
-                <input type="text" class="name">
-                <input type="text" class="contact">
-                <input type="date" id="fechaNacimiento">
+                <input type="text" class="name" placeholder="ingrese su nombre aqui">
+                <input type="date" id="fechaNacimiento" >
             </form>
             <footer>
                     <button class="validate">Validate</button>
@@ -340,16 +375,10 @@
                 }
                 return edadmenGo;
             };
-            window.addEventListener('load', function () {
-
-                fechaNacimiento.addEventListener('change', function () {
-                    if (this.value) {
-                        edadmenGo.innerText = `La edad es: ${calcularEdad(this.value)} años`;
-                    }
-                });
-
-            });
-            // woman
+            
+            //CALCULAR LA EDAD
+           
+                
             const calcularEdadWN = (fechaNacimiento) => {
                 const fechaActual = new Date();
                 const anoActual = parseInt(fechaActual.getFullYear());
