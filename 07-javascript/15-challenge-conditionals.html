@@ -136,7 +136,7 @@
         }
         
         main.menGo article{
-            background: url(images/CHALLENGE/hombre\ no\ va.png) no-repeat center;
+            background: url(images/CHALLENGE/Group\ 1.png) no-repeat center;
             width: 425px;
             height: 600px;
             position: relative;
@@ -328,7 +328,7 @@
                 </button>
             </header>
             <form class="information">
-                <input type="text" class="name" placeholder="ingrese su nombre aqui">
+                <input type="text" class="name" placeholder="ingrese su nombre aqui" required id="nameOfPerson">
                 <input type="date" id="fechaNacimiento" >
             </form>
             <footer>
@@ -355,6 +355,7 @@
         const checkHG = document.querySelector('section.checkHG')
         const checkMB = document.querySelector('section.checkMB')
         const checkMG = document.querySelector('section.checkMG')
+        const personName = document.querySelector('#nameOfPerson')
         const calcularEdad = (fechaNacimiento) => {
                 const fechaActual = new Date();
                 const anoActual = parseInt(fechaActual.getFullYear());
@@ -372,6 +373,10 @@
                     if (diaActual < diaNacimiento) {
                         edadmenGo--;
                     }
+                }
+
+                if (edadmenGo >= 18) {
+                    alert("probar")
                 }
                 return edadmenGo;
             };
@@ -418,6 +423,12 @@
             checkMB.classList.remove('ocultar')
             // actions
             valid.onclick = () =>{
+                if(personName.value.length == 0 ) {
+                    alert("You should write a name!")
+                    return
+                }
+
+            calcularEdad()
             form.classList.add('ocultar')
             main1.classList.remove('ocultar')
             }
@@ -434,8 +445,15 @@
             checkMG.classList.remove('ocultar')
             checkHG.classList.add('ocultar')
             checkHB.classList.remove('ocultar')
-            // actions
+
             valid.onclick = () =>{
+                if(personName.value.length == 0 ) {
+                    alert("You should write a name!")
+                    return
+                }
+
+
+            // actions
             form.classList.add('ocultar')
             main3.classList.remove('ocultar')
             }
@@ -443,7 +461,9 @@
                 main3.classList.add('ocultar')
                 form.classList.remove('ocultar')
             }
+
         }
+        
         
     </script>
 </body>
