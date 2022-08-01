@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                    
+            </a>
+            <h1>Methods Dates</h1>
+        </header>
+        <section>
+            <h2>Methods GET</h2>
+            <ul class="list-get"></ul>
+            <h2>Methods SET</h2>
+            <ul class="list-set"></ul>
+        </section>
+    </main>
+    <script>
+        //Elements
+        const list_get = document.querySelector('ul.list-get')
+        const list_set = document.querySelector('ul.list-set')
+        var today = new Date()
+        const future = new Date('01/18/2023 08:00:00')
+
+        // GET
+        list_get.innerHTML = `<li> <b>Current Date:</b> ${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()} </li>`
+        list_get.innerHTML += `<li> <b>Current Year:</b> ${today.getFullYear()} </li>`
+        list_get.innerHTML += `<li> <b>Current Month:</b> ${today.getMonth()+1} </li>`
+        list_get.innerHTML += `<li> <b>Current Day:</b> ${today.getDay()} </li>`
+        list_get.innerHTML += `<li> <b>Current Hours:</b> ${today.getHours()} </li>`
+        list_get.innerHTML += `<li> <b>Current Minute:</b> ${today.getMinutes()} </li>`
+        list_get.innerHTML += `<li> <b>Current Seconds:</b> ${today.getSeconds()} </li>`
+
+        //SET
+        list_set.innerHTML = `<li> <b>Future Date:</b> ${future.getDate()}/${future.getMonth()+1}/${future.getFullYear()} </li>`
+        future.setMonth('02')
+        future.setDate('25')
+        future.setFullYear('2028')
+
+        list_set.innerHTML += `<li> <b>Future Year:</b> ${future.getFullYear()} </li>`
+        list_set.innerHTML += `<li> <b>Future Month:</b> ${future.getMonth()+1} </li>`
+        list_set.innerHTML += `<li> <b>Future Weekend:</b> ${future.getDay()} </li>`
+
+    </script>
+</body>
+</html>
