@@ -15,6 +15,7 @@
 | 5. PUG        | HTML Preprocessor                 | [open folder](05-pug/)        |
 | 6. SASS       | CSS Preprocessor                  | [open folder](06-sass/)       |
 | 7. Javascript | Programming Language (Clien-Side) | [open folder](07-javascript/) |
+| 8. jquery     | library                           | [open folder](08-jquery/) |
 
 ---
 
