@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu JS</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Main Menu</h1>
+        </header>
+        <nav id="menu">
+            
+        </nav>
+    </main>
+    <script>
+        const menu = document.getElementById('menu');
+        const links = [
+            {url: '01-write.html', text: 'write'},
+            {url: '02-comments.html', text: 'Comments'},
+            {url: '03-get-elements.html', text: 'Get Elements'},
+            {url: '04-variables.html', text: 'Variables'},
+            {url: '05-methods-object.html', text: 'Methods Object'},
+            {url: '06-types-objects.html', text: 'Types Objects'},
+            {url: '07-vehicle-objects.html', text: 'Veichle Object'},
+            {url: '08-functions.html', text: 'Functions'},
+            {url: '09-challenge-calculator.html', text: 'Challenge calculator'},
+            {url: '10-operators-arithmetic.html', text: 'Operators arithmetic'},
+            {url: '11-operators-assignment.html', text: 'Operators assignment'},
+            {url: '12-operators-comparison.html', text: 'Operators Comparison'},
+            {url: '13-operators-logical.html', text: 'Operators logical'},
+            {url: '14-conditionals.html', text: 'Conditionals'},
+            {url: '15-challenge-conditionals.html', text: 'Challenge conditionals'},
+            {url: '16-loops.html', text: 'Loops'},
+            // {url: '17-pokedex-api.html', text: 'Pokedex api'},
+            {url: '17-pokedex-api-pag1.html', text: 'Pokedex api 2'},
+            {url: '18-events.html', text: 'events'},
+            {url: '19-methods-string.html', text: 'methods-string'},
+            {url: '20-methods-numbers.html', text: 'methods-numbers'},
+            {url: '21-methods-mathematics.html', text: 'methods-mathematics'},
+            {url: '22-challenge-baloto.html', text: 'challenge-baloto'},
+            {url: '23-methods-date.html', text: 'methods-date'},
+            {url: '24-methods-arrays.html', text: 'methods-arrays'},
+            {url: '25-challenge-arrays.html', text: 'challenge-arrays'},
+            {url: '26-events-time.html', text: 'events-time'},
+            {url: '27-challenge-events.html', text: 'challenge-events'},
+            {url: '28-pop-up-window.html', text: 'pop-up-window'}
+
+        ]
+        links.forEach(renderLink)
+        function renderLink(item, index, arr){
+            menu.innerHTML+="<li><a href='"+item.url+"'><i>"+(index+1)+"</i>"+item.text+"</a></li>"
+        }
+    </script>
+</body>
+</html>
