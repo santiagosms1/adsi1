@@ -1,6 +1,6 @@
 body {
-    background-color: #f06868;
-    color: rgb(180, 253, 198);
+    background-color: #0066ff;
+    color: rgb(0, 250, 62);
     font-family: Arial;
     font-size: 16px;
 }
@@ -24,7 +24,7 @@ main header h1 {
 
 main header h1 span a:link,
 main header h1 span a:visited {
-    color: #fff;
+    color: rgb(255, 0, 0);
     text-decoration: none;
     float: left;
 }
