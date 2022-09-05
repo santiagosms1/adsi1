@@ -28,7 +28,7 @@
             opacity: 0.4;
             cursor: not-allowed;
         }
-        figure img.mario {
+        figure img.anime {
             display: block;
             margin: 20px auto;
             position: relative;
@@ -57,7 +57,7 @@
                 <button class="btnStop">Stop</button>
             </nav>
             <figure>
-                <img class="mario" src="images/marioparty.png">
+                <img class="anime" src="images/anime.png">
             </figure>
         </section>
     </main>
@@ -66,97 +66,97 @@
     <script>
         $(document).ready(function() {
             // Variables
-            $marioIsVisible = true;
+            $animeIsVisible = true;
 
             // Events
             // Hide
             $('.btnHide').click(function(e) {
-                $('.mario').hide();
-                $marioIsVisible = false;
-                marioVisible($marioIsVisible);
+                $('.anime').hide();
+                $animeIsVisible = false;
+                animeVisible($animeIsVisible);
             });
             // Show
             $('.btnShow').click(function(e) {
-                $('.mario').show();
-                $marioIsVisible = true;
-                marioVisible($marioIsVisible);
+                $('.anime').show();
+                $animeIsVisible = true;
+                animeVisible($animeIsVisible);
             });
             // Toggle
             $('.btnToggle').click(function(e) {
-                $('.mario').toggle();
-                if ($('.mario').attr('style')) {
-                    $marioIsVisible = false;
+                $('.anime').toggle();
+                if ($('.anime').attr('style')) {
+                    $animeIsVisible = false;
                 } else {
-                    $marioIsVisible = true;
+                    $animeIsVisible = true;
                 }
-                marioVisible($marioIsVisible);
+                animeVisible($animeIsVisible);
             });
             // SlideDown
             $('.btnSlideDown').click(function(e) {
-                $('.mario').slideDown(2000);
-                $marioIsVisible = true;
-                marioVisible($marioIsVisible);
+                $('.anime').slideDown(2000);
+                $animeIsVisible = true;
+                animeVisible($animeIsVisible);
             });
             // SlideUp
             $('.btnSlideUp').click(function(e) {
-                $('.mario').slideUp(2000);
-                $marioIsVisible = false;
-                marioVisible($marioIsVisible);
+                $('.anime').slideUp(2000);
+                $animeIsVisible = false;
+                animeVisible($animeIsVisible);
             });
             // SlideToggle
             $('.btnSlideToggle').click(function(e) {
-                $('.mario').slideToggle(2000);
+                $('.anime').slideToggle(2000);
                 setTimeout(function() {
-                    if ($('.mario').attr('style')) {
-                        $marioIsVisible = false;
+                    if ($('.anime').attr('style')) {
+                        $animeIsVisible = false;
                     } else {
-                        $marioIsVisible = true;
+                        $animeIsVisible = true;
                     }
-                    marioVisible($marioIsVisible);
+                    animeVisible($animeIsVisible);
                 },2500);
             });
             // FadeIn
             $('.btnFadeIn').click(function(e) {
-                $('.mario').fadeIn(2000);
-                $marioIsVisible = true;
-                marioVisible($marioIsVisible);
+                $('.anime').fadeIn(2000);
+                $animeIsVisible = true;
+                animeVisible($animeIsVisible);
             });
             // FadeOut
             $('.btnFadeOut').click(function(e) {
-                $('.mario').fadeOut(2000);
-                $marioIsVisible = false;
-                marioVisible($marioIsVisible);
+                $('.anime').fadeOut(2000);
+                $animeIsVisible = false;
+                animeVisible($animeIsVisible);
             });
             // FadeTo
             $('.btnFadeTo').click(function(e) {
-                $('.mario').fadeTo(2000, 0.3);
-                $marioIsVisible = true;
-                marioVisible($marioIsVisible);
+                $('.anime').fadeTo(2000, 0.3);
+                $animeIsVisible = true;
+                animeVisible($animeIsVisible);
             });
             // FadeToggle
             $('.btnFadeToggle').click(function(e) {
-                $('.mario').fadeToggle(2000);
+                $('.anime').fadeToggle(2000);
                 setTimeout(function() {
-                    if ($('.mario').attr('style')) {
-                        $marioIsVisible = false;
+                    if ($('.anime').attr('style')) {
+                        $animeIsVisible = false;
                     } else {
-                        $marioIsVisible = true;
+                        $animeIsVisible = true;
                     }
-                    marioVisible($marioIsVisible);
+                    animeVisible($animeIsVisible);
                 },2500);
             });
             // Animate
             $('.btnAnimate').click(function(e) {
-                $('.mario').animate({top: '100px'}, 1000)
+                $('.anime').animate({top: '100px'}, 1000)
                            .animate({top: '0px'}, 1000);
             });
             // Stop
             $('.btnStop').click(function(e) {
-                $('.mario').stop();
+                $('.anime').stop();
             });
 
             // Functions
-            marioVisible = ($status) => {
+            animeVisible = ($status) => {
                 if ($status) {
                     $('.hide').prop('disabled', false);
                     $('.show').prop('disabled', true);
@@ -166,7 +166,7 @@
                 }
             }
 
-            marioVisible($marioIsVisible);
+            animeVisible($animeIsVisible);
         });
     </script>
     

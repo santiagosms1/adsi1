@@ -1,6 +1,6 @@
 body {
-    background-color: #0066ff;
-    color: rgb(0, 250, 62);
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
     font-family: Arial;
     font-size: 16px;
 }
@@ -35,7 +35,7 @@ main section {
 
 main section h2,
 main section h3 {
-    background-color: #9514ff;
+    background-color: #00ffff;
     border-radius: 10px 0px 10px 0px;
     margin-top: 20px;
     padding: 10px;
