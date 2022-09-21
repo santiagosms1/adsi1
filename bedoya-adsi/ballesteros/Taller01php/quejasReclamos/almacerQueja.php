@@ -23,7 +23,7 @@
     fputs($ar, "------------------------------\n");
     fclose($ar);
     echo "Los datos se cargaron correctamente.";
-
+   
     ?>
 
 </body>

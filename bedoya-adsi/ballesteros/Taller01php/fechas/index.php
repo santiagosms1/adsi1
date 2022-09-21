@@ -11,8 +11,8 @@
     <br>
     <input type="submit" value="validar">
   </form>
-  <form action="../../index.php" method="post">
-    <input type="submit" value="Index">
+    <form action="pagina1.html" method="post">
+<input type="submit" value="index">
   </form>
 </body>
 

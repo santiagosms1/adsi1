@@ -4,21 +4,36 @@
   <title>Problema</title>
 </head>
 
+<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../public/css/todoForm.css">
 <body>
-  <?php
-  $conexion = mysqli_connect("localhost", "root", "", "base1") or
-    die("Problemas con la conexión");
-
-  mysqli_query($conexion, "delete from alumnos where id=$_REQUEST[id]") or
+  <div class="my-3 container border border-light rounded">
+<?php
+  require_once('../../sources/function.php');
+  
+    $conexion =  retornarConexion();
+ 
+  $registros = mysqli_query($conexion, "select nombre FROM alumnos where codigocurso = '$_GET[codigo]'") or
     die("Problemas en el select:" . mysqli_error($conexion));
 
-  echo "Se efectuó el borrado de ese alumno.";
-
+    
+  while ($reg = mysqli_fetch_array($registros)) {
+    // echo "Nombre del curso:" . $reg['nombrecurso'] . "<br>";
+    echo $reg['nombre']. "<br>";
+    
+  }
+  
   mysqli_close($conexion);
   ?>
-   <form action="pagina1.php" method="post">
-    <input type="submit" value="Index">
+  <form action="alumnosPorCurso.php">
+    <input class="btn btn-warning" type="submit" value="Volver">
   </form>
+
+
+  <form action="../index.php">
+    <input class="btn btn-success" type="submit" value="Inicio">
+  </form>
+</div>
 </body>
 
 </html>

@@ -17,8 +17,17 @@
         <textarea name="queja"  cols="30" rows="10"></textarea>
         <br>
         <input type="submit" value="Enviar">
+        
+         
+            
+    
     </form>
     <br>
+    <form action="../Formulario Busqued - delete/pagina1.php" method="post">
+        <br>
+        <input type="submit" value="index">
+    <form action="pagina1.php" method="post">
     <a href="mostrarQueja.php">Ver toda la fila de quejas</a>
+  
 </body>
 </html>

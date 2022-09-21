@@ -4,30 +4,35 @@
   <title>Problema</title>
 </head>
 
+<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../public/css/todoForm.css">
 <body>
-  <?php
-  require_once('../../function.php');
+  <div class="my-3 container border border-light rounded">
+<?php
+  require_once('../../sources/function.php');
   
     $conexion =  retornarConexion();
  
   $registros = mysqli_query($conexion, "select count(alu.id) as cantidad,
-                                               nombrecurso, nombre
+                                               idC, nombrecurso, nombre
                                           from alumnos as alu
                                           inner join cursos as cur on cur.idC=alu.codigocurso
                                           group by alu.codigocurso") or
     die("Problemas en el select:" . mysqli_error($conexion));
   while ($reg = mysqli_fetch_array($registros)) {
-    echo "Nombre del curso:" . $reg['nombrecurso'] . "<br>";
+    // echo "Nombre del curso:" . $reg['nombrecurso'] . "<br>";
+    echo "Nombre del curso:<a href=\"pagina6.1.php?codigo=$reg[idC]\">" . $reg['nombrecurso'] . "</a><br>";
+   
     echo "Cantidad de inscriptos:" . $reg['cantidad'] . "<br>";
-    echo "Cantidad de inscriptos:" . " " . $reg['nombre'] . " - - -" ."<br>";
-
     echo "<hr>";
   }
+  
   mysqli_close($conexion);
   ?>
-  <form action="../pagina1.php">
-    <input type="submit" value="Index">
+  <form action="../index.php">
+    <input class="btn btn-primary" type="submit" value="Inicio">
   </form>
+</div>
 </body>
 
 </html>

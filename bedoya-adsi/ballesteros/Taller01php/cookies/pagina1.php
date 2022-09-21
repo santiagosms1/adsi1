@@ -14,6 +14,7 @@
   </form>
   <form action="../Formulario Busqued - delete/pagina1.html" method="post">
     <input type="submit" value="Index">
+    
   </form>
 </body>
 
