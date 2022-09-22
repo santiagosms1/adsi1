@@ -20,9 +20,8 @@
                                           group by alu.codigocurso") or
     die("Problemas en el select:" . mysqli_error($conexion));
   while ($reg = mysqli_fetch_array($registros)) {
-    // echo "Nombre del curso:" . $reg['nombrecurso'] . "<br>";
     echo "Nombre del curso:<a href=\"pagina6.1.php?codigo=$reg[idC]\">" . $reg['nombrecurso'] . "</a><br>";
-   
+   echo "hola";
     echo "Cantidad de inscriptos:" . $reg['cantidad'] . "<br>";
     echo "<hr>";
   }
