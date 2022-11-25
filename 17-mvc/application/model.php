@@ -1,38 +1,20 @@
-<?php 
-
+<?php
 class Model extends DataBase {
-       public function listUsers() {
-              return mysqli_query($this->conx, "SELECT * FROM users");
-       }
-       public function showUser($id) {
-              return mysqli_query($this->conx, "SELECT * FROM users WHERE id = $id");
-       }
-       public function addUser() {
-              $names     = $_POST['names'];
-        $birthdate = $_POST['birthdate'];
-        $email     = $_POST['email'];
-        $password  = md5($_POST['password']);
-        $path      = "public/imgs/";
-        $photo     = $path.time().".".pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
-        move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
-              return mysqli_query($this->conx, "INSERT INTO users VALUES (DEFAULT, '$names', '$birthdate', '$email', '$photo',  DEFAULT, '$password', DEFAULT)");
-       }
-       public function updUser() {
-              $id        = $_POST['id'];
-              $names     = $_POST['names'];
-        $birthdate = $_POST['birthdate'];
-        $email     = $_POST['email'];
-        if(!empty($_FILES['photo']['name'])) {
-              $path      = "public/imgs/";
-              $photo     = $path.time().".".pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
-              move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
+    public function listUsers(){
+        return mysqli_query($this->conx,"SELECT * FROM users");
+    }
+    public function showInfo($id){
+        return mysqli_query($this->conx,"SELECT * FROM users WHERE id =".$id);
+    }
+    public function add(){
+        return mysqli_query($this->conx,"INSERT INTO users (fullname,email,photo) VALUES ('".$_REQUEST['fullname']."','".$_REQUEST['email']."','".$_REQUEST['photo']."')");
+    }
+    public function edit($id){
+        return mysqli_query($this->conx,"UPDATE users SET fullname = '".$_REQUEST['fullname']."', email = '".$_REQUEST['email']."', photo = '".$_REQUEST['photo']."'  WHERE id =  " .$id);
+    }
+    public function delete($id){
+        return mysqli_query($this->conx,"DELETE FROM users WHERE id =  " .$id);
+    }
+    
 
-              return mysqli_query($this->conx, "UPDATE users SET names = '$names', birthdate = '$birthdate', email = '$email', photo = '$photo' WHERE id = $id");
-              } else {
-                     return mysqli_query($this->conx, "UPDATE users SET names = '$names', birthdate = '$birthdate', email = '$email' WHERE id = $id");
-              }
-       }
-       public function deleteUser($id) {
-              return mysqli_query($this->conx, "DELETE FROM users WHERE id = $id");
-       }
 }

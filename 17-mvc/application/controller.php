@@ -1,76 +1,61 @@
 <?php
-  class Controller {
+class Controller {
     public $load;
     public $model;
+    function __construct() {
+        $this->load = new Load();
+        $this->model = new Model();
+        if($_GET){
+            if($_GET['method']=='show'){
+                $this->info();
+            }
+            if($_GET['method']=='edit'){
+                $this->editU();
 
-    public function __construct() {
-      $this->load = new Load;
-      $this->model = new Model;
-      // GET
-      if (isset($_GET['method'])) {
-        if ($_GET['method'] == "show") {
-          $this->show($_GET['id']);
-        }
-        elseif($_GET['method'] == "add") {
-          $this->add();
-        }
-        elseif($_GET['method'] == "edit") {
-          $this->edit($_GET['id']);
-        }
-        elseif($_GET['method'] == "delete") {
-          $this->delete($_GET['id']);
-        }
-      } 
-      // POST
-      elseif(isset($_POST['method'])) {
-        if ($_POST['method'] == "store") {
-          $this->store();
-        }
-        elseif($_POST['method'] == "update") {
-          $this->update();
-        }
-      }
-      // Index
-      else {
-        $this->welcome();
-      }
-    }
+            }
+            if($_GET['method']=='delete'){
+                $this->deleteU();
+            }
+            if($_GET['method']=='add'){
+                $this->addU();
+            }
+        }else{
 
-    private function welcome() {
-      $data = $this->model->listUsers();
-      $this->load->view('welcome.php', $data);
+            $this->welcome();
+        }
+        
     }
-    private function show($id) {
-      $data = $this->model->showUser($id);
-      $this->load->view('show.php', $data);
+    private function welcome(){
+        $data = $this->model->listUsers();
+        $this->load->view('welcome.php',$data);
+        
     }
-    private function add() {
-      $this->load->view('add.php');
+    private function Info(){
+        $id = $_GET['id'];
+        $data = $this->model->showInfo($id);
+        $this->load->view('show.php',$data);
+        
     }
-    private function store() {
-      if ($this->model->addUser()) {
-        header('Location: ./');
-      } else {
-        header('Location: ./');
-      }
+    private function addU(){
+        if($_POST){
+            $path  = "../public/images/";
+            $data = $this->model->add();
+        }
+        $this->load->view('add.php');
+        
     }
-    private function edit($id) {
-      $data = $this->model->showUser($id);
-      $this->load->view('edit.php', $data);
-    }
-    private function update() {
-      if ($this->model->updUser()) {
-        header('Location: ./');
-      } else {
-        header('Location: ./');
-      }
-    }
-    private function delete($id) {
-      if ($this->model->deleteUser($id)) {
-        header('Location: ./');
-      } else {
-        header('Location: ./');
-      }
-    }
+    private function editU(){
+        if($_POST){
 
-  }
+            $id = $_GET['id'];
+            $data = $this->model->edit($id);
+        }
+        $this->load->view('edit.php');
+        
+    }
+    private function deleteU(){
+        $id = $_GET['id'];
+        $data = $this->model->delete($id);
+        header("Location: ./");
+    }
+}
