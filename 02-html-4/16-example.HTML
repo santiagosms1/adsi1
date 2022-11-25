@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            min-height: 84px;
+            background-color: #384f07;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            color: azure;
+        }
+        a {
+          
+            text-decoration: none;
+            color: azure;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 90px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            font-weight: 600;
+            padding-right: 10px;
+        }
+        nav a:hover {
+            color: black;
+        }
+        aside {
+            width:100%;
+            height:186px;
+        }
+        .footer {
+            display: flex;
+            min-height: 84px;
+            background-color: #384f07;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            
+        }
+
+        input {
+            border-style: none;
+            outline: none;
+            width: 140px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .abajo {
+            border-style: none;
+            width: 80px;
+            height: 24px;
+            border-radius: 5px;
+            background-color: #9ee00d;
+            color: white;
+            cursor: pointer;
+        }
+
+        /*BOTONES*/
+        .cont {
+            padding-right: 25px;
+            padding-top: 10px;
+        }
+        .compra {
+            background: url(./img/Compra.svg) no-repeat ;
+            width: 37px;
+            height: 41px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cuenta {
+            background: url(./img/Cuenta.svg) no-repeat;
+            border: none;
+            width: 40px;
+            height: 41px;
+            cursor: pointer;
+        }
+
+        /*Redes Sociales*/
+        .ins {
+            background: url(./img/Vector.svg) no-repeat;
+            width: 55px;
+            height: 55px;
+            border: none;
+            cursor: pointer;
+        }
+        .face {
+            background: url(./img/bi_facebook.svg) no-repeat;
+            width: 55px;
+            height: 55px;
+            border: none;
+            cursor: pointer;
+        }
+        .twit {
+            background: url(./img/bi_twitter.svg) no-repeat;
+            width: 55px;
+            height: 55px;
+            border: none;
+            cursor: pointer;
+        }
+        .copy {
+            display: flex;
+            justify-content: center;
+            background-color: #6a8f1b;
+            color: white;
+        }
+
+        /* ENLACES FOOTER */
+        ul {
+            list-style: none;
+        }
+        .enlaces {
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 22px;
+        }
+        li  {
+            color: #FFFFFF;
+        }
+         .redes {
+            color: #FFFFFF;
+         }
+         .suscribete {
+            color: #FFFFFF;
+         }
+         .q {
+            color: #cec7c7;
+            cursor: pointer;
+         }
+         article{
+            flex-shrink: 0;
+            display: flex;
+            flex-basis: 780px;
+         }
+         .search{
+            position: relative;
+            left: 50px;
+            width: 360px;
+            
+         }
+         .buscar{
+            width: 300px;
+         }
+         .nav__link{
+            top: 11px;
+            position: relative;
+         }
+         .comcuent{
+            margin: 0px 30px;
+         }
+         .enviar{
+            width: 55px;
+         }
+
+        @media (max-width: 787px){
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                padding: 10px 0px;
+            }
+            aside {
+                flex-direction: column;
+            }
+            .nav__link{
+                font-size: 13px;
+            }
+            .nombre__empresa{
+                font-size: 17px;
+            }
+            .search{
+                
+                width: 330px;
+            }
+            .buscar {
+                width: 260px;
+            }
+            
+            .logab {
+                width: 33%;
+            }
+            .suscribete {
+                border: 2px solid papayawhip;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/icondos.svg" alt="logo__compañia">
+            <h2 class="nombre__empresa">Compra Local, apoya lo nuestro</h2>
+        </div>
+        <nav>
+            <div class="search">
+                <input type="search" name="" id="" class="buscar">
+                <input type="submit" class="enviar">
+            </div>
+            <a href="" class="nav__link">Inicio</a>
+            <a href="" class="nav__link">Productos</a>
+            <a href="" class="nav__link">Productores</a>
+            <a href="" class="nav__link">Quienes somos</a>
+            <a href="" class="nav__link">Contact</a>
+            <a href="" class="nav__link">Blog</a>
+        </nav>
+        <div class="cont">
+            <button class="comcuent compra"></button>
+            <button class="comcuent cuenta"></button>
+        </div>
+    </header>
+    <article>
+
+    </article>
+    <aside>
+        <div class="footer">
+            <img src="img/Logo__Header.svg" alt="logo__compañia" class="logab">
+            <ul class="listab">
+                <li class="enlaces">Enlaces</li>
+                <li class="q">Inicio</li>
+                <li class="q">Nosotros</li>
+                <li class="q">Blog</li>
+                <li class="q">Contacto</li>
+                <li class="q">Preguntas frecuentes</li>
+            </ul>
+            <div class="redes1">
+                <h1 class="redes">Redes sociales</h1>
+                <button class="ins"></button>
+                <button class="face"></button>
+                <button class="twit"></button>
+            </div>
+            <div class="suscribete">
+                <h1 class="suscribete">Suscribete</h1>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Email">
+                <button class="abajo">Suscribete</button>
+            </div>
+        </div>
+        <div class="copy">
+            <h1>Mercaconsciente 2022</h1>
+        </div>
+    </aside>
+</body>
+</html>

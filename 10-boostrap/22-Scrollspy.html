@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <style>
-
+        .scrollspy-example {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 10.4rem; 
+            overflow-y: scroll;
+            padding: 10px;
+            position: relative;
+        }
     </style>
 </head>
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-md-12 |mt-5 mb-5">
+            <div class="col-md-12 mt-5 mb-5">
                 <h1 class="text-center">Scrollspy</h1>
                 <hr>
                 <nav aria-label="breadcrumb">
@@ -36,24 +43,33 @@
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
                         <!--  -->
-                        <h3 class="text-muted mt-5">Examples:</h3>
+                        <h3 class="text-muted mt-5">Example:</h3>
+                        <div class="bd-example">
+                        <div class="row">
+                            <div class="col-4">
+                            <div id="list-example" class="list-group">
+                                <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                                <a class="list-group-item list-group-item-action active" href="#list-item-3">Item 3</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                            </div>
+                            </div>
+                            <div class="col-8">
+                            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                                <h4 id="list-item-1">Item 1</h4>
+                                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                                <h4 id="list-item-2">Item 2</h4>
+                                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                                <h4 id="list-item-3">Item 3</h4>
+                                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                                <h4 id="list-item-4">Item 4</h4>
+                                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
 
-                        <div id="list-example" class="list-group">
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-</div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-  <h4 id="list-item-1">Item 1</h4>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor quod quas! Enim dolorum incidunt animi nam quidem nostrum alias perspiciatis aut, labore similique, ex, ipsa at ratione molestiae? Labore!</p>
-  <h4 id="list-item-2">Item 2</h4>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, vitae, quaerat, blanditiis veritatis maxime aliquid suscipit accusantium ea impedit aspernatur deleniti. Dolores, explicabo! Quidem minima voluptatum ut mollitia sapiente veniam?</p>
-  <h4 id="list-item-3">Item 3</h4>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ex nam corporis exercitationem, deleniti placeat impedit illo voluptatibus. Delectus iusto numquam consectetur enim illum facilis quasi blanditiis sapiente, ullam eum!</p>
-  <h4 id="list-item-4">Item 4</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Laborum atque quo pariatur facere dolorum animi libero corporis id iure ullam vitae cum accusantium corrupti esse quos obcaecati consectetur, tenetur ipsam!</p>
-</div>
+
                     </div>
                 </div>
 
@@ -62,8 +78,6 @@
     </main>
 
     <script src="js/bootstrap.min.js"></script>
-    <script>var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-  target: '#navbar-example'
-})</script>
+
 </body>
 </html>
